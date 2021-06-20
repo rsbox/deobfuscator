@@ -1,0 +1,18 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.5.10' apply false
+}
+
+allprojects {
+    apply plugin: 'org.jetbrains.kotlin.jvm'
+
+    group 'io.rsbox.deobfuscator'
+    version '1.0.0'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation "org.jetbrains.kotlin:kotlin-stdlib:_"
+    }
+}
