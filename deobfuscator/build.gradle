@@ -1,0 +1,14 @@
+plugins {
+    id 'application'
+}
+
+run {
+    group = "rsbox"
+    workingDir = rootProject.projectDir
+    mainClassName = "io.rsbox.deobfuscator.Deobfuscator"
+}
+
+dependencies {
+    implementation project(":asm")
+    implementation "com.github.ajalt:clikt:_"
+}
