@@ -6,7 +6,7 @@ import io.rsbox.deobfuscator.asm.ClassPool
 import io.rsbox.deobfuscator.testclient.TestClientCommand
 import io.rsbox.deobfuscator.transformer.DeadCodeRemover
 import io.rsbox.deobfuscator.transformer.RuntimeExceptionRemover
-import io.rsbox.deobfuscator.transformer.controlflow.ControlFlowFixer
+import io.rsbox.deobfuscator.transformer.controlflow.ControlFlowNormalizer
 import org.tinylog.kotlin.Logger
 
 class Deobfuscator(val pool: ClassPool) {
@@ -19,7 +19,7 @@ class Deobfuscator(val pool: ClassPool) {
     init {
         register<RuntimeExceptionRemover>()
         register<DeadCodeRemover>()
-        register<ControlFlowFixer>()
+        register<ControlFlowNormalizer>()
     }
 
     fun run() {
@@ -36,7 +36,7 @@ class Deobfuscator(val pool: ClassPool) {
             val endTime = System.currentTimeMillis()
             val deltaTimeSeconds = (endTime - startTime) / 1000
 
-            Logger.info("Completed byecode transformations in $deltaTimeSeconds seconds.")
+            Logger.info("Completed bytecode transformations in $deltaTimeSeconds seconds.")
         }
     }
 
