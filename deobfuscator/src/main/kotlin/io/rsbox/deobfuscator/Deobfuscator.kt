@@ -6,7 +6,8 @@ import io.rsbox.deobfuscator.asm.ClassPool
 import io.rsbox.deobfuscator.testclient.TestClientCommand
 import io.rsbox.deobfuscator.transformer.DeadCodeRemover
 import io.rsbox.deobfuscator.transformer.RuntimeExceptionRemover
-import io.rsbox.deobfuscator.transformer.controlflow.ControlFlowNormalizer
+import io.rsbox.deobfuscator.transformer.ControlFlowNormalizer
+import io.rsbox.deobfuscator.transformer.RenameTransformer
 import org.tinylog.kotlin.Logger
 
 class Deobfuscator(val pool: ClassPool) {
@@ -20,6 +21,7 @@ class Deobfuscator(val pool: ClassPool) {
         register<RuntimeExceptionRemover>()
         register<DeadCodeRemover>()
         register<ControlFlowNormalizer>()
+        register<RenameTransformer>()
     }
 
     fun run() {

@@ -4,4 +4,5 @@ dependencies {
     api "org.ow2.asm:asm-util:_"
     api "org.ow2.asm:asm-tree:_"
     api "org.jetbrains.kotlinx:kotlinx-coroutines-core:_"
+    implementation "org.jgrapht:jgrapht-core:_"
 }

@@ -1,4 +1,4 @@
-package io.rsbox.deobfuscator.transformer.controlflow
+package io.rsbox.deobfuscator.asm.controlflow
 
 import org.objectweb.asm.tree.AbstractInsnNode
 
@@ -16,7 +16,8 @@ class Block {
 
     val branches = mutableListOf<Block>()
 
-    val head: Block get() {
+    val head: Block
+        get() {
         var block = this
         var last: Block? = prev
         while(last != null) {

@@ -1,4 +1,4 @@
-package io.rsbox.deobfuscator.transformer.controlflow
+package io.rsbox.deobfuscator.asm.controlflow
 
 import io.rsbox.deobfuscator.asm.owner
 import org.objectweb.asm.tree.AbstractInsnNode.JUMP_INSN

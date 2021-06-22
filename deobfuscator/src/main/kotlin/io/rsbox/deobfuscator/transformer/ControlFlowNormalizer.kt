@@ -1,7 +1,9 @@
-package io.rsbox.deobfuscator.transformer.controlflow
+package io.rsbox.deobfuscator.transformer
 
 import io.rsbox.deobfuscator.Transformer
 import io.rsbox.deobfuscator.asm.ClassPool
+import io.rsbox.deobfuscator.asm.controlflow.Block
+import io.rsbox.deobfuscator.asm.controlflow.ControlFlowAnalyzer
 import org.objectweb.asm.tree.InsnList
 import org.objectweb.asm.tree.LabelNode
 import org.tinylog.kotlin.Logger
